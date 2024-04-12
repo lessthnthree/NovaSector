@@ -41,6 +41,7 @@
 	var/result = input(usr, "Select reboot method", "World Reboot", options[1]) as null|anything in options
 	if(result)
 		BLACKBOX_LOG_ADMIN_VERB("Reboot World")
+		SSticker.finalize_round_end_game() // NOVA EDIT ADDITION - Round end games
 		var/init_by = "Initiated by [usr.client.holder.fakekey ? "Admin" : usr.key]."
 		switch(result)
 			if("Regular Restart")

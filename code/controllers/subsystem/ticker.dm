@@ -748,6 +748,7 @@ SUBSYSTEM_DEF(ticker)
 
 	if(delay_end && !skip_delay)
 		to_chat(world, span_boldannounce("Reboot was cancelled by an admin."))
+		start_roundend_game() // NOVA EDIT ADDITION - Round end games
 		return
 	if(end_string)
 		end_state = end_string
