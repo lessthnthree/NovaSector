@@ -154,13 +154,6 @@
 	fired_projectile.fired_from = src
 	fired_projectile.fire()
 
-/mob/living/basic/pet/dog/corgi/borgi/Life(seconds, times_fired)
-	. = ..()
-
-	// spark for no reason
-	if(prob(spark_chance))
-		do_sparks(3, 1, src)
-
 /mob/living/basic/pet/dog/corgi/borgi/death(gibbed)
 	// Only execute the below if we successfully died
 	. = ..(gibbed)
